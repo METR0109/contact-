@@ -62,7 +62,19 @@ button {
   margin: -1px;
 }
 
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+}
+
 .contacts {
+  width: 100%;
   background: #84a178;
   border-radius: 10px;
   border-color: black;
@@ -73,20 +85,18 @@ button {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 186%;
-  /* identical to box height, or 30px */
-
   letter-spacing: 0.04em;
-
   color: #131313;
 }
 
 .contacts__list {
   display: flex;
+  justify-content: center;
   gap: 32px;
 }
 
 .contacts__item {
+  max-width: 288px;
   padding: 40px;
   background: #ffffff;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
@@ -94,28 +104,37 @@ button {
 }
 
 .contacts__title {
-  /* display: inline; */
-  height: 30px;
+  display: inline-block;
+  height: auto;
+  width: auto;
   padding: 4px 14px;
   margin-bottom: 32px;
   background: #f8d24e;
   border-radius: 6px;
+  line-height: calc(22 / 16);
 }
 
 .contacts__city {
   padding-bottom: 8px;
+  line-height: calc(30 / 16);
 }
 
 .contacts__address {
+  line-height: calc(29 / 16);
+  letter-spacing: 0.04em;
+  color: #d6936d;
 }
 
 .contacts__sked {
+  gap: 12px;
+  line-height: calc(30 / 16);
 }
 
 .contacts__sked--day {
 }
 
 .contacts__sked--time {
+  color: #ababab;
 }
 
 .contacts__line {
@@ -125,17 +144,20 @@ button {
 }
 
 .contacts__relations {
+  gap: 2px;
 }
 
 .contacts__relations--item {
 }
 
 .contacts__relations--link {
+  color: #131313;
 }
 
 .contacts__btn--list {
-  margin-top: 60px;
   display: flex;
+  justify-content: center;
+  margin-top: 60px;
   gap: 16px;
 }
 
@@ -145,9 +167,29 @@ button {
 .contacts__btn {
   width: 196px;
   height: 42px;
+  border-radius: 10px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: calc(18 / 14);
+  box-shadow: none;
+  border-width: 0;
+  color: #131313;
 }
 
 .btn--locations {
+  background: #f8d24e;
+}
+.btn--locations:hover {
+  background: #0a8817;
+}
+.btn--locations:focus {
+  background: #0a8817;
+  color: #ffffff;
+}
+.btn--locations:disabled {
+  background: #ababab;
 }
 
 .btn--franchise {
